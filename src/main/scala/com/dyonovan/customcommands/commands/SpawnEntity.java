@@ -11,6 +11,7 @@ import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.EnumHand;
@@ -55,6 +56,8 @@ public class SpawnEntity extends CommandBase {
         else if (args[1].equalsIgnoreCase("zombie")) {
             entity = new EntityZombie(server.getEntityWorld());
             entity.setHeldItem(EnumHand.MAIN_HAND, new ItemStack(Items.DIAMOND_AXE));
+            entity.setDropItemsWhenDead(true);
+            entity.setDropChance(EntityEquipmentSlot.MAINHAND, 0.8F);
         }
         else throw new WrongUsageException("customcommands:command.spawnentity.usage");
 
@@ -62,7 +65,7 @@ public class SpawnEntity extends CommandBase {
         entity.attackEntityAsMob(player);
         server.getEntityWorld().spawnEntityInWorld(entity);
 
-        player.addChatMessage(new TextComponentString(args[2] + " sent you a Creeper! Look around you..."));
+        player.addChatMessage(new TextComponentString(args[2] + " sent you a " + args[1] + ". Look around you..."));
     }
 
     @Override
