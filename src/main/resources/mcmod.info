@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "customcommands",
+  "name": "Custom Commands",
+  "description": "A set of Custom Commands for use with Beam Interactive",
   "version": "${version}",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Dyonovan"],
+  "credits": "All the people watching my stream as I write this.",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
