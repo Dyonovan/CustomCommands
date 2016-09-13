@@ -1,6 +1,6 @@
 package com.dyonovan.customcommands
 
-import com.dyonovan.customcommands.commands.SpawnEntity
+import com.dyonovan.customcommands.commands.{ChangePlayerHealth, SpawnEntity}
 import com.dyonovan.customcommands.lib.Constants
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.Mod.EventHandler
@@ -41,5 +41,6 @@ object CustomCommands {
     def serverLoad(event: FMLServerStartingEvent): Unit = {
         //Inital our commands
         event.registerServerCommand(new SpawnEntity)
+        event.registerServerCommand(new ChangePlayerHealth)
     }
 }

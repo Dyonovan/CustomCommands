@@ -68,10 +68,7 @@ public class SpawnEntity extends CommandBase {
         player.addChatMessage(new TextComponentString(args[2] + " sent you a " + args[1] + ". Look around you..."));
     }
 
-    @Override
-    public int getRequiredPermissionLevel() {
-        return 3;
-    }
+
 
     @Override
     public List<String> getTabCompletionOptions(MinecraftServer server, ICommandSender sender, String[] args, BlockPos pos) {

@@ -1,1 +1,3 @@
 customcommands:command.spawnentity.usage=cc_spawnentity <player> <entity> <fromUser>
+customcommands:command.changehealth.usage=cc_changehealth <player> <amount> <fromUser>
+customcommands:exception.playerdead=Player is dead
